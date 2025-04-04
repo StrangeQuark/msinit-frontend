@@ -13,7 +13,7 @@ const Home = () => {
         { name: "Auth Service", isSelected: false, repo: "authservice", branch: "main" },
         { name: "Email Service", isSelected: false, repo: "emailservice", branch: "main" },
         { name: "React Service", isSelected: false, repo: "reactservice", branch: "main" },
-        { name: "Gateway Service", isSelected: false, repo: "gatewayservice", branch: "main" }
+        // { name: "Gateway Service", isSelected: false, repo: "gatewayservice", branch: "main" }
     ])
 
     const toggleItem = (index) => {
