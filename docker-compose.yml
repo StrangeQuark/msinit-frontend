@@ -1,13 +1,11 @@
-version: '1.0.0'
-
 services:
-  app:
+  msinit-frontend-service:
     build: .
     networks:
       - msinit-network
     ports:
-      - "8080:3001"
-    container_name: react-app
+      - "8080:80"
+    container_name: msinit-frontend-service
 networks:
   msinit-network:
     external: true
