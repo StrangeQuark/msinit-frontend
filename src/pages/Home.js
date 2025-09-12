@@ -13,7 +13,9 @@ const Home = () => {
         { name: "Auth Service", isSelected: false, repo: "authservice", branch: "main" },
         { name: "Email Service", isSelected: false, repo: "emailservice", branch: "main" },
         { name: "React Service", isSelected: false, repo: "reactservice", branch: "main" },
-        // { name: "Gateway Service", isSelected: false, repo: "gatewayservice", branch: "main" }
+        { name: "Gateway Service", isSelected: false, repo: "gatewayservice", branch: "main" },
+        { name: "File Service", isSelected: false, repo: "fileservice", branch: "main" },
+        { name: "Vault Service", isSelected: false, repo: "vaultservice", branch: "main" }
     ])
 
     const toggleItem = (index) => {
