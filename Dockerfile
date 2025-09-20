@@ -1,20 +1,24 @@
 # Stage 1: Build
-FROM node:20-alpine AS build
+FROM node:22-alpine AS builder
 
-WORKDIR /reactservice
+WORKDIR /msinit-frontend
 
-COPY package.json ./
+COPY package.json package-lock.json* ./
 RUN npm install
 
 COPY public ./public
 COPY src ./src
-
+COPY index.html ./index.html
+COPY vite.config.js ./vite.config.js
 RUN npm run build
 
 # Stage 2: Serve with NGINX
 FROM nginx:alpine
 
-COPY --from=build /reactservice/build /usr/share/nginx/html
+COPY --from=builder /msinit-frontend/dist /usr/share/nginx/html
+
+# Replace default nginx config
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 

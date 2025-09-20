@@ -1,4 +1,3 @@
-import React from "react";
 import "./css/Toolbar.css";
 
 const Toolbar = () => {

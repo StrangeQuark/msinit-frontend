@@ -1,4 +1,3 @@
-import React from "react";
 import "./css/ConfigurationContainer.css";
 
 const ConfigurationContainer = ({projectUtil}) => {
