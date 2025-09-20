@@ -1,11 +1,11 @@
 services:
-  msinit-frontend-service:
+  msinit-frontend:
     build: .
     networks:
       - msinit-network
     ports:
-      - "8080:80"
-    container_name: msinit-frontend-service
+      - "3001:80"
+    container_name: msinit-frontend
 networks:
   msinit-network:
     external: true

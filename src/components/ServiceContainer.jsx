@@ -1,4 +1,3 @@
-import React from "react";
 import "./css/ServiceContainer.css";
 
 const ServiceContainer = ({ item, toggleItem }) => {
