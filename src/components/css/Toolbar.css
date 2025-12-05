@@ -43,6 +43,12 @@
   min-width: 10px;
 }
 
+.large-github-icon {
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
 @media (max-width: 900px) {
   .toolbar {
     flex-direction: column;
