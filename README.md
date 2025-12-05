@@ -1,20 +1,40 @@
-# Getting Started with the MSINIT frontend service
+# MSINIT-FRONTEND
+**MSINIT-FRONTEND** is an open source UI for the MSINIT download page. It works in conjunction with the [MSINIT backend](https://github.com/StrangeQuark/msinit) to serve the website hosted at [https://msinit.com](https://msinit.com)
+<br><br><br>
 
-Begin by installing the node modules with the `npm i` command
+## Technology Stack
+- Javascript
+- Vite
+- React
+- NPM
+- Docker & Docker Compose
+<br><br><br>
 
-You can run the service locally by running `npm start`
+## Getting Started
 
-## Docker
+### Prerequisites
+- Docker and Docker Compose installed
+<br><br>
 
-You can also build the service in a docker container with the following commands:
+### Running the Application
+Clone the repository and start the service using Docker Compose:
 
-```docker image build -t msinit-frontend .```
-```docker run -dp 3001:3001 --name msinit-frontend msinit-frontend```
+```
+git clone https://github.com/StrangeQuark/msinit-frontend.git
+cd msinit-frontend
+docker-compose up --build
+```
+<br>
 
-This application also supports docker compose, it assumes that an external network is available with the name shared-network:
+## Deployment
+This project includes a `Jenkinsfile` for use in CI/CD pipelines. Jenkins must be configured with:
 
-```docker network create shared-network```
+- Docker support
+<br><br>
 
-Note that the above command needs only to be run once, you can then launch the container using the following command:
+## License
+This project is licensed under the GNU General Public License. See `LICENSE.md` for details.
+<br><br>
 
-```docker-compose up```
+## Contributing
+Contributions are welcome! Feel free to open issues or submit pull requests.
