@@ -1,6 +1,13 @@
 import "./css/Toolbar.css";
+import { FaGithub } from "react-icons/fa";
 
 const Toolbar = () => {
+    const githubURL = "https://github.com/StrangeQuark/"
+
+    const handleGithubClick = () => {
+        window.open(githubURL, "_blank");
+    };
+
     return (
         <div id="toolbar" className="toolbar">
             {/* Left Section: Image and Website Name */}
@@ -8,16 +15,10 @@ const Toolbar = () => {
                 <h1 className="toolbar-logo">Microservice Initializer</h1>
             </div>
 
-            {/* Right Section: OS Selection */}
-            {/* <div className="toolbar-right">
-                <label>Operating System:</label>
-                <div id='spacer' className="spacer"></div>
-                <select className="os-selector">
-                    <option value="windows">Windows</option>
-                    <option value="linux">Linux</option>
-                    <option value="macos">MacOS</option>
-                </select>
-            </div> */}
+            {/* Right Section: GH link */}
+            <div className="toolbar-right">
+                <FaGithub className="large-github-icon" onClick={handleGithubClick}/>
+            </div>
         </div>
     );
 };
