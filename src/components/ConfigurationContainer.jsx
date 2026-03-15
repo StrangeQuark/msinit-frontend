@@ -33,14 +33,27 @@ const ConfigurationContainer = ({projectUtil}) => {
             </div>
 
             <div id="middle-config-div" className="middleConfigDiv">
-              <h2>Operating System</h2>
+              <h2>CICD pipeline</h2>
+              
+              <label>
+                  None<input type="radio" name="CICD" value="none" onChange={(e) => projectUtil.setCICD(e.target.value)} checked={projectUtil.CICD === 'none'} />
+              </label>
+              <label>
+                  Jenkins<input type="radio" name="CICD" value="jenkins" onChange={(e) => projectUtil.setCICD(e.target.value)} checked={projectUtil.CICD === 'jenkins'}/>
+              </label>
+              {/* <label>
+                  Github Actions<input type="radio" name="CICD" value="githubactions" onChange={(e) => projectUtil.setCICD(e.target.value)} checked={projectUtil.CICD === 'githubactions'}/>
+              </label> */}
+
+
+              {/* <h2>Operating System</h2>
               
               <label>
                   Linux<input type="radio" name="OS" value="linux" onChange={(e) => projectUtil.setOS(e.target.value)} checked={projectUtil.OS === 'linux'} />
               </label>
               <label>
                   Windows<input type="radio" name="OS" value="windows" onChange={(e) => projectUtil.setOS(e.target.value)} checked={projectUtil.OS === 'windows'}/>
-              </label>
+              </label> */}
             </div>
 
             <div id="bottom-config-div" className="bottomConfigDiv">
