@@ -41,9 +41,9 @@ const ConfigurationContainer = ({projectUtil}) => {
               <label>
                   Jenkins<input type="radio" name="CICD" value="jenkins" onChange={(e) => projectUtil.setCICD(e.target.value)} checked={projectUtil.CICD === 'jenkins'}/>
               </label>
-              {/* <label>
+              <label>
                   Github Actions<input type="radio" name="CICD" value="githubactions" onChange={(e) => projectUtil.setCICD(e.target.value)} checked={projectUtil.CICD === 'githubactions'}/>
-              </label> */}
+              </label>
 
 
               {/* <h2>Operating System</h2>
