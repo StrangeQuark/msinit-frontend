@@ -9,3 +9,5 @@ services:
 networks:
   msinit-network:
     external: true
+  shared-network:
+    external: true
