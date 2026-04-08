@@ -3,6 +3,7 @@ services:
     build: .
     networks:
       - msinit-network
+      - shared-network
     ports:
       - "3001:80"
     container_name: msinit-frontend
