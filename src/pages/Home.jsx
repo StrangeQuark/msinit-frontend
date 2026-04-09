@@ -4,6 +4,8 @@ import "./css/Home.css";
 import Toolbar from '../components/Toolbar';
 import Footer from '../components/Footer';
 
+const { VITE_API_URL } = import.meta.env;
+
 const Home = () => {
     const[projectName, setProjectName] = useState('msinit')
     const[projectGroup, setProjectGroup] = useState("com.strangequark")
@@ -51,11 +53,9 @@ const Home = () => {
 
         if(repositories.length === 0)
             return;
-    
-        const url = 'http://localhost:3000/batch-download'
-    
+        
         try {
-            const response = await fetch(url, {
+            const response = await fetch(VITE_API_URL, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
