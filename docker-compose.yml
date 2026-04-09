@@ -1,6 +1,9 @@
 services:
   msinit-frontend:
-    build: .
+    build:
+      context: .
+      args:
+        - VITE_API_URL: ${VITE_API_URL}
     networks:
       - msinit-network
       - shared-network
