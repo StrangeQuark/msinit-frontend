@@ -1,4 +1,3 @@
-import { traceFetch } from "../utility/TraceUtility"
 import { useState } from 'react';
 import Main from '../components/Main';
 import "./css/Home.css";
@@ -58,7 +57,7 @@ const Home = () => {
             return;
         
         try {
-            const response = await traceFetch(VITE_API_URL, {
+            const response = await fetch(VITE_API_URL, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
